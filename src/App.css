@@ -4,9 +4,29 @@
     width: 70px;
     height: 70px;
 
-
-
 }
+table{
+    border-collapse: collapse;
+}
+
 tr{
 shape-margin: 300px;
+}
+.square{
+    background-color: white
+}
+.square:hover{
+    background-color: red
+}
+td.square.shipHit{
+    background-color: green;
+
+}
+td.square.hit{
+    background-color: black;
+
+}
+
+td.square.miss {
+
 }
