@@ -16,17 +16,18 @@ shape-margin: 300px;
     background-color: white
 }
 .square:hover{
-    background-color: red
+    background-color: grey
 }
-td.square.shipHit{
-    background-color: green;
 
-}
-td.square.hit{
-    background-color: black;
+
+.shipHit{
+    background-color: red;
 
 }
 
-td.square.miss {
 
+
+
+.miss {
+background-color: green;
 }
