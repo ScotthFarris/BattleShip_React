@@ -6,17 +6,26 @@ const EMPTY = 0
 const SHIP = 1
 const MISS = "Miss"
 const HIT = "Hit"
+const shipLength = [{
+    submarine: 3,
+    carrier: 5,
+    cruiser: 3,
+    frigit: 2,
+    battleship: 3
+}]
+
 
 class gameBoard extends Component {
     constructor(props){
         super(props)
 
-        const { ships, shots } = this.props
+        const {ships, shots } = this.props
 
         this.state = {
             board: this.setupBoard(),
             shots: shots,
-            ships: ships,
+            ships: ships
+
         }
     }
     //mounts placeShip() function before rendering the page
@@ -26,11 +35,11 @@ class gameBoard extends Component {
         }
     };
 
-    placeShips(){
-        for(let i = 0; i < 5; i++){
-            this.placeShip()
-        }
-    }
+    // placeShips(){
+    //     for(let i = 0; i < 5; i++){
+    //         this.placeShip()
+    //     }
+    // }
 
     // pushes 10 empty arrays into the state of "board"
     setupBoard() {
@@ -45,7 +54,9 @@ class gameBoard extends Component {
         }
         console.log(board);
         return board
+
     };
+
 
     // creates a row on the grid and ties state of the board to the view of the page
     createRow(rowNumber){
@@ -85,23 +96,33 @@ class gameBoard extends Component {
         var row = Math.floor(Math.random()*10);
         var col = Math.floor(Math.random()*10);
         return([row] ,[col])
-    console.log([row])
+
 }
 
 
 
-//tries to place a ship vertically(col) on the board
-    placeShipVert([row , col]){
-        const board = this.state.board
-        var row = Math.floor(Math.random()*10);
-        var col = Math.floor(Math.random()*10);
-
-        if(board[row][col]=== SHIP){
-            this.placeShipVert()
-        } //else if()
-
-    }
-
+// tries to place a ship vertically(col) on the board
+    // shipVert([row , col]){
+    //     const board = this.state.board
+    //     var rows = Math.floor(Math.random()*10);
+    //     var cols = Math.floor(Math.random()*10);
+    //
+    //     if(board[row][col]=== SHIP){
+    //         this.shipVert()
+    //     } //else if()
+    //
+    // }
+    //
+    // shipHor([row , col]){
+    //     const board = this.state.board
+    //     var rows = Math.floor(Math.random()*10);
+    //     var cols = Math.floor(Math.random()*10);
+    //
+    //     if(board[row][col]=== SHIP){
+    //         this.shipHor()
+    //     } //else if()
+    //
+    // }
     placeShip() {
         const board = this.state.board
         var row = Math.floor(Math.random()*10)//chooses random location on the board(horizontal)
@@ -151,18 +172,22 @@ class gameBoard extends Component {
     }
 
     gameRestart() {
-        const { ships, shots } = this.props
+        const { reality, board, ships, shots } = this.props
         this.setState({
             board: this.setupBoard(),
             shots: shots,
-            ships: ships,
+            ships: ships
+
+
         })
+
+
 
     }
 
     render() {
         return (
-            <div id="div">
+            <div className= "board-container">
                 <Scoreboard torpedoes={this.state.shots} boats={this.state.ships}  />
                 <table>
                         <tbody>

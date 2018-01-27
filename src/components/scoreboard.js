@@ -7,7 +7,7 @@ class Scoreboard extends Component {
     render() {
 
         return(
-            <div>
+            <div className= "score-container">
                 <header>
                     <h3 className="torp">Torpedoes: {this.props.torpedoes} </h3>
                         <div className="ship">

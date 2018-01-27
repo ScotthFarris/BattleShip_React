@@ -5,34 +5,59 @@
     height: 70px;
 
 }
+body {
+    background-image: url("https://i.imgur.com/uJhe7DK.jpg");
+
+    cursor: url("https://tse1.mm.bing.net/th?id=OIP.9wDclYszSpXMS9URbi19qgEsEr&w=250&h=249&pid=1.1"),auto;
+}
+
 table{
     border-collapse: collapse;
+    align-self: center;
+
+
 }
 
 tr{
 shape-margin: 300px;
 }
 .square{
-    background-color: white
+    background-color: #6495ED
 }
 .square:hover{
-    background-color: grey
+    background-color: grey;
+    background: transparent;
 }
 
 
 .shipHit{
-    background-color: red;
+    background-image: url("http://www.banzaj.pl/pictures/roznosci/deepwater_horizon/THUMBS/THUMB_deepwater_horizon_katastrofa_01.jpg")
 
 }
-
-/* .ship{
-    float: left;
-}
-.torp{
-    float: right;
-} */
 
 
 .miss {
-background-color: green;
+    background-image: url("https://t00.deviantart.net/2vlLzO7DXfPL1wUvUT-S-jdmAi0=/fit-in/150x150/filters:no_upscale():origin()/pre00/b443/th/pre/f/2015/113/7/8/1372272351_3172713_upset_businessman_giving_middle_by_cookie_fish-d8qqyxl.jpg");
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.board-container{
+
+    justify-content:center;
+}
+.score-container{
+    display: flex;
+    justify-content: center;
+}
+.torp{
+    text-shadow: 0 0 3px #6495ED;
+
+}
+.ship{
+    text-shadow: 0 0 3px #6495ED;
+}
+.App-title{
+    text-shadow: 0 0 3px #6495ED;
 }

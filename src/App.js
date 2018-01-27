@@ -14,10 +14,10 @@ class App extends Component {
 
 render() {
         return (
-          <div className="App">
-                <header className="App-header">
+          <div className="container">
+                
                     <h1 className="App-title">Welcome to Battleship</h1>
-                  </header>
+
             <Board ships={5} shots={50} />
           </div>
         );
